@@ -1,0 +1,13 @@
+.text {
+  margin: 0;
+}
+
+.text_medium {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.text_color_light {
+  color: var(--color-light-3);
+}

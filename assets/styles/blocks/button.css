@@ -1,0 +1,17 @@
+.button {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.button_large {
+  padding: 19px 21px;
+}

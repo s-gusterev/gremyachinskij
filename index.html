@@ -1,13 +1,70 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Группа компаний Гремячинский ДОК - Главная</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="header">
+      <div class="header__top container">
+        <a href="/" class="logo"></a>
+        <nav class="header__nav">
+          <ul class="list-reset header__list">
+            <li class="header__item">
+              <a class="header__link" href="#">Продукция</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Поставщикам</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Вакансии</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Новости</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__top-contacts">
+          <div class="header__contacts-links">
+            <a
+              class="header__contact-link header__contact-link_tel"
+              href="tel:+73422500888"
+              >+7 (342) 250-08-88</a
+            >
+            <a
+              class="header__contact-link header__contact-link_email"
+              href="mailto:info@grdok.ru"
+              >info@grdok.ru</a
+            >
+          </div>
+          <select class="header__select" name="lang" id="lang-select">
+            <option class="header__option" value="ru">ru</option>
+            <option class="header__option" value="en">en</option>
+          </select>
+        </div>
+      </div>
+      <div class="header__bottom container">
+        <h1 class="title title_large title_color_light header__title">
+          Группа компаний Гремячинский ДОК
+        </h1>
+        <p class="text text_medium text_color_light header__text">
+          Современное предприятие по&nbsp;производству гнуто-клееных изделий
+          (латофлекс), фанеры, топливных брикетов RUF, березового угля,
+          пиломатериалов
+        </p>
+        <button
+          class="btn-reset button button_large header__button"
+          type="button"
+        >
+          Связаться с нами
+        </button>
+      </div>
+    </header>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,32 @@
+:root {
+  --font-family: 'Stapel', 'Arial', 'Helvetica', sans-serif;
+
+  --color-light: #fff;
+  --color-light-2: #f2f2f2;
+  --color-light-3: #d2d2d2;
+
+  --color-accent: #0e9e2f;
+  --color-accent-hover: #10ad34;
+
+  --color-dark: #494b44;
+  --color-dark-2: #787878;
+
+  --color-primary: #92938f;
+
+  --gap: 10px;
+  --container-width: 1160px;
+  --container-offset: 15px;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}

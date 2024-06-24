@@ -1,0 +1,116 @@
+.header {
+  padding-top: 27px;
+  padding-bottom: 79px;
+  background-image: url(../../images/backgrounds/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__top {
+  --container-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 230px;
+  column-gap: 34px;
+  row-gap: 5px;
+  flex-wrap: wrap;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+
+.header__link {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--color-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header__top-contacts {
+  display: flex;
+  align-items: center;
+  gap: 39px;
+  margin-left: auto;
+}
+
+.header__contacts-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__contact-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-light);
+  padding-left: 26px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  transition: color 0.3s ease;
+}
+
+.header__contact-link_tel {
+  background-image: url(../../images/icons/phone.svg);
+}
+
+.header__contact-link_email {
+  background-image: url(../../images/icons/mail.svg);
+}
+
+.header__link:hover,
+.header__contact-link:hover,
+.header__select:hover {
+  color: var(--color-light-3);
+}
+
+.header__select {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-light);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-inline-start: 13px;
+  cursor: pointer;
+  background-image: url(../../images/icons/polygon.svg);
+  background-repeat: no-repeat;
+  background-size: 7px 7px;
+  background-position: left center;
+  transition: color 0.3s ease;
+}
+
+.header__select:focus {
+  outline: none;
+}
+
+.header__option {
+  color: var(--color-dark);
+  padding-top: 30px;
+}
+
+.header__bottom {
+  --container-width: 1280px;
+}
+
+.header__title {
+  max-width: 998px;
+  margin-bottom: 22px;
+}
+
+.header__text {
+  max-width: 622px;
+  margin-bottom: 58px;
+}
