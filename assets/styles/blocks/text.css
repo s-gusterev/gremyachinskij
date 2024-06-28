@@ -11,3 +11,9 @@
 .text_color_light {
   color: var(--color-light-3);
 }
+
+@media (max-width: 815px) {
+  .text_medium {
+    font-size: 16px;
+  }
+}

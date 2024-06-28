@@ -1,5 +1,4 @@
 .header {
-  padding-top: 27px;
   padding-bottom: 79px;
   background-image: url(../../images/backgrounds/header-bg.jpg);
   background-repeat: no-repeat;
@@ -7,6 +6,7 @@
 }
 
 .header__top {
+  padding-top: 27px;
   --container-width: 1300px;
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@
   column-gap: 34px;
   row-gap: 5px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .header__list {
@@ -113,4 +114,130 @@
 .header__text {
   max-width: 622px;
   margin-bottom: 58px;
+}
+
+/* На мобильных устройствах width: 33px;
+  height: 18px; Сейчас для планшетов */
+
+.header__burger {
+  width: 43px;
+  height: 28px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* На мобильных устройствах height: 2px */
+
+.header__burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-accent);
+  transition: all 0.3s ease;
+}
+
+.header__burger_active .header__burger-line {
+  border-radius: 2px;
+}
+
+.header__burger_active .header__burger-line:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.header__burger_active .header__burger-line:nth-child(2) {
+  transform: scale(0);
+}
+
+.header__burger_active .header__burger-line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+@media (max-width: 815px) {
+  .header__top {
+    --container-offset: 20px;
+    padding-top: 28px;
+    padding-bottom: 24px;
+    margin-bottom: 149px;
+    background-color: rgba(49, 49, 49, 0.9);
+    z-index: 2;
+  }
+
+  .header__nav,
+  .header__top-contacts {
+    top: 92px;
+    right: -100%;
+    transform: translate(100%, 0);
+  }
+
+  .header__title {
+    max-width: 560px;
+    margin-bottom: 27px;
+  }
+
+  .header__text {
+    margin-bottom: 47px;
+    max-width: 510px;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__bottom {
+    --container-offset: 40px;
+  }
+
+  .header__nav {
+    position: absolute;
+    width: 100%;
+    background-color: #313131;
+    padding-top: 43px;
+    padding-bottom: 30px;
+    transition: all 500ms ease;
+  }
+
+  .header__nav_open {
+    transition: all 300ms ease;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__list {
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+  }
+
+  .header__top-contacts {
+    margin-left: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #313131;
+    padding-bottom: 91px;
+    transition: all 500ms ease-in-out;
+    justify-content: center;
+  }
+
+  .header__top-contacts_open {
+    transition: all 500ms ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__contacts-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__contact-link {
+    color: var(--color-accent);
+    background-image: none;
+    padding-left: 0;
+  }
+
+  .header__select {
+    display: none;
+  }
 }
