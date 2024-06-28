@@ -18,8 +18,8 @@ const toggledMenu = () => {
   const heightHeaderNavigation = positionInfoHeaderNavigation.height;
 
   headerContacts.style.top = isOpenBurger
-    ? 92 + heightHeaderNavigation + 'px'
-    : 92 + 'px';
+    ? 70 + heightHeaderNavigation + 'px'
+    : 70 + 'px';
 };
 
 burger.addEventListener('click', toggledMenu);

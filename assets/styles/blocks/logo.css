@@ -13,10 +13,10 @@
 }
 
 /* TODO: add media queries */
-/* 
-@media (max-width: 815px) {
+
+@media (max-width: 480px) {
   .logo {
     width: 141px;
     height: 24px;
   }
-} */
+}
