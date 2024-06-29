@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.title_base {
+  font-size: 40px;
+}
+
 .title_large {
   font-weight: 500;
   font-size: 60px;

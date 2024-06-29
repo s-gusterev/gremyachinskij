@@ -14,8 +14,20 @@
   padding-bottom: 230px;
   column-gap: 34px;
   row-gap: 5px;
-  flex-wrap: wrap;
   position: relative;
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 104px;
+  row-gap: 10px;
+  flex-wrap: wrap;
 }
 
 .header__list {
@@ -37,7 +49,6 @@
   display: flex;
   align-items: center;
   gap: 39px;
-  margin-left: auto;
 }
 
 .header__contacts-links {
@@ -154,7 +165,7 @@
   transform: translateY(-13px) rotate(-45deg);
 }
 
-@media (max-width: 815px) {
+@media (max-width: 824px) {
   .header__top {
     --container-offset: 20px;
     padding-top: 28px;
@@ -164,11 +175,25 @@
     z-index: 2;
   }
 
-  .header__nav,
-  .header__top-contacts {
+  .header__menu {
+    position: absolute;
+    left: 0;
     top: 92px;
-    right: -100%;
-    transform: translate(100%, 0);
+    background-color: #313131;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 43px;
+    padding-bottom: 93px;
+    row-gap: 30px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+  }
+
+  .header__menu_open {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 300ms ease-in;
   }
 
   .header__title {
@@ -189,42 +214,10 @@
     --container-offset: 40px;
   }
 
-  .header__nav {
-    position: absolute;
-    width: 100%;
-    background-color: #313131;
-    padding-top: 43px;
-    padding-bottom: 30px;
-    transition: all 500ms ease;
-  }
-
-  .header__nav_open {
-    transition: all 300ms ease;
-    left: 50%;
-    right: 0;
-    transform: translateX(-50%);
-  }
-
   .header__list {
     flex-direction: column;
     align-content: center;
     text-align: center;
-  }
-
-  .header__top-contacts {
-    margin-left: 0;
-    position: absolute;
-    width: 100%;
-    background-color: #313131;
-    padding-bottom: 91px;
-    transition: all 300ms ease;
-    justify-content: center;
-  }
-
-  .header__top-contacts_open {
-    transition: all 300ms ease;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .header__contacts-links {
@@ -247,6 +240,10 @@
   .header__top {
     padding-top: 25px;
     padding-bottom: 21px;
+  }
+
+  .header__menu {
+    top: 70px;
   }
   .header__text {
     max-width: 300px;

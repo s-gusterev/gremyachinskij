@@ -1,0 +1,17 @@
+.products {
+  background-color: #686868;
+  padding-top: 99px;
+  padding-bottom: 133px;
+  background-image: url(../../images/backgrounds/products-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.products__title {
+  margin-bottom: 24px;
+}
+
+.products__text {
+  margin-bottom: 48px;
+  max-width: 486px;
+}

@@ -1,11 +1,15 @@
 .text {
   margin: 0;
+  font-weight: 400;
+  line-height: 160%;
 }
 
 .text_medium {
-  font-weight: 400;
   font-size: 18px;
-  line-height: 160%;
+}
+
+.text_base {
+  font-size: 16px;
 }
 
 .text_color_light {

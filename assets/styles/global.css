@@ -8,5 +8,5 @@
 
 html {
   font-family: var(--font-family);
-  overflow: hidden;
+  overflow-x: hidden;
 }

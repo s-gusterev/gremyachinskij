@@ -9,43 +9,45 @@
   <body>
     <header class="header">
       <div class="header__top container">
-        <a href="/" class="logo"></a>
-        <nav class="header__nav">
-          <ul class="list-reset header__list">
-            <li class="header__item">
-              <a class="header__link" href="#">Продукция</a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Поставщикам</a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Вакансии</a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Новости</a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__top-contacts">
-          <div class="header__contacts-links">
-            <a
-              class="header__contact-link header__contact-link_tel"
-              href="tel:+73422500888"
-              >+7 (342) 250-08-88</a
-            >
-            <a
-              class="header__contact-link header__contact-link_email"
-              href="mailto:info@grdok.ru"
-              >info@grdok.ru</a
-            >
+        <a href="/" class="logo header__logo"></a>
+        <div class="header__menu">
+          <nav class="header__nav">
+            <ul class="list-reset header__list">
+              <li class="header__item">
+                <a class="header__link" href="#">Продукция</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Поставщикам</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Вакансии</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Новости</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__top-contacts">
+            <div class="header__contacts-links">
+              <a
+                class="header__contact-link header__contact-link_tel"
+                href="tel:+73422500888"
+                >+7 (342) 250-08-88</a
+              >
+              <a
+                class="header__contact-link header__contact-link_email"
+                href="mailto:info@grdok.ru"
+                >info@grdok.ru</a
+              >
+            </div>
+            <select class="header__select" name="lang" id="lang-select">
+              <option class="header__option" value="ru">ru</option>
+              <option class="header__option" value="en">en</option>
+            </select>
           </div>
-          <select class="header__select" name="lang" id="lang-select">
-            <option class="header__option" value="ru">ru</option>
-            <option class="header__option" value="en">en</option>
-          </select>
         </div>
         <button
           class="btn-reset header__burger"
@@ -74,6 +76,29 @@
         </button>
       </div>
     </header>
+
+    <main class="main">
+      <section class="products">
+        <div class="products__container container">
+          <h2 class="title title_base title_color_light products__title">
+            Продукция завода
+          </h2>
+          <p class="text text_base text_color_light products__text">
+            Ниже представлен список нашей продукции. Получить дополнительную
+            информацию, а также оставить заявку можно по контактам коммерческой
+            службы.
+          </p>
+
+          <ul class="list-reset products__list">
+            <li class="products__item">
+              <div class="products__item-img">
+                <img />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
