@@ -2,6 +2,7 @@
 @import url(./settings.css);
 @import url(./global.css);
 @import url(./blocks/container.css);
+@import url(./blocks/grid.css);
 
 @import url(./blocks/logo.css);
 @import url(./blocks/title.css);

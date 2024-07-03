@@ -6,10 +6,15 @@
   background-color: var(--color-accent);
   border-radius: 2px;
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
 .button:hover {
   background-color: var(--color-accent-hover);
+}
+
+.button_medium {
+  padding: 15px 30px;
 }
 
 .button_large {
