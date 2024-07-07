@@ -3,10 +3,11 @@
 @import url(./global.css);
 @import url(./blocks/container.css);
 @import url(./blocks/grid.css);
+@import url(./blocks/button.css);
+@import url(./blocks/button-slider.css);
 
 @import url(./blocks/logo.css);
 @import url(./blocks/title.css);
 @import url(./blocks/text.css);
-@import url(./blocks/button.css);
 @import url(./blocks/header.css);
 @import url(./blocks/products.css);

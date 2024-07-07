@@ -1,0 +1,20 @@
+.button-slider {
+  width: 54px;
+  height: 54px;
+  color: var(--color-light);
+}
+
+.button-slider:hover svg path,
+.button-slider:hover svg rect {
+  fill: currentColor;
+  transition: fill 0.3s ease-in-out;
+}
+
+.button-slider svg path,
+.button-slider svg rect {
+  transition: fill 0.3s ease;
+}
+
+.button-slider:disabled {
+  opacity: 0.3;
+}

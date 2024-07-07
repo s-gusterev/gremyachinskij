@@ -54,12 +54,13 @@ const enableProductsSwiper = function () {
     slidesPerGroup: 1,
     slidesPerView: 'auto',
     loop: true,
+    speed: 700,
     spaceBetween: 40,
     watchOverflow: true,
     modules: [Navigation],
     navigation: {
-      prevEl: '.products__button-slider_prev',
-      nextEl: '.products__button-slider_next',
+      prevEl: '.products__button-slider-prev',
+      nextEl: '.products__button-slider-next',
     },
     on: {
       resize: function () {
