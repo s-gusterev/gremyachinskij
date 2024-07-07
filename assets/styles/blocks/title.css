@@ -45,6 +45,10 @@
   color: var(--color-light);
 }
 
+.title_color_dark {
+  color: var(--color-dark);
+}
+
 @media (max-width: 815px) {
   .title_large {
     font-size: 40px;

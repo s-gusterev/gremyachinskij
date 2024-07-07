@@ -16,6 +16,10 @@
   color: var(--color-light-3);
 }
 
+.text_color_dark {
+  color: var(--color-primary);
+}
+
 @media (max-width: 815px) {
   .text_medium {
     font-size: 16px;
