@@ -1,0 +1,137 @@
+.supply {
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../images/backgrounds/postavki-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin-bottom: 137px;
+}
+
+.supply__content {
+  padding-top: 59px;
+  display: flex;
+  gap: 61px;
+}
+
+.supply__description {
+  max-width: 438px;
+  margin-left: 101px;
+  padding-bottom: 85px;
+}
+
+.supply__title {
+  margin-top: 27px;
+  margin-bottom: 42px;
+}
+
+.supply__button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 58px;
+}
+
+.supply__text {
+  max-width: 297px;
+}
+
+.supply__banner {
+  background-color: rgba(14, 158, 47, 0.9);
+  padding: 48px 34px 51px 45px;
+  max-width: 500px;
+  clip-path: polygon(83% 0, 100% 13%, 100% 100%, 0 100%, 0 0);
+}
+
+.supply__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.supply__item-title {
+  text-transform: none;
+  margin-bottom: 14px;
+}
+
+.supply__item-text {
+  max-width: 421px;
+}
+
+@media (max-width: 1200px) {
+  .supply__description {
+    margin-left: 0;
+  }
+
+  .supply__content {
+    justify-content: space-around;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 915px) {
+  .supply {
+    border-radius: 0;
+  }
+
+  .supply__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .supply__description {
+    max-width: 730px;
+  }
+
+  .supply__text {
+    max-width: max-content;
+  }
+
+  .supply__banner {
+    max-width: none;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 915px) {
+  .supply__title {
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+
+  .supply__description {
+    padding-bottom: 35px;
+  }
+
+  .supply__button {
+    margin-bottom: 36px;
+  }
+
+  .supply__banner {
+    padding: 60px 55px 80px 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply {
+    margin-bottom: 80px;
+  }
+
+  .supply__description {
+    padding-bottom: 44px;
+  }
+
+  .supply__item-title {
+    margin-bottom: 10px;
+  }
+  .supply__item:not(:last-child) {
+    margin-bottom: 33px;
+  }
+}

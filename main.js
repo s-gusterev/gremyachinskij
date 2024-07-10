@@ -15,6 +15,8 @@ const productsSlide = document.querySelectorAll('.products__slide');
 
 const radioActivityValue = document.querySelectorAll('input[name = activity]');
 const activityContent = document.querySelectorAll('.activity__content');
+const inputText = document.querySelectorAll('.select-box__input-text');
+const selectBoxOption = document.querySelectorAll('.select-box__option');
 
 const enableActivityContent = () =>
   radioActivityValue.forEach((radio) => {
@@ -30,9 +32,6 @@ const enableActivityContent = () =>
   });
 
 enableActivityContent();
-
-const inputText = document.querySelectorAll('.select-box__input-text');
-const selectBoxOption = document.querySelectorAll('.select-box__option');
 
 inputText.forEach((item) => {
   item.addEventListener('click', () => {

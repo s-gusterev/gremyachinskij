@@ -16,6 +16,10 @@
   color: var(--color-light-3);
 }
 
+.text_color_light-2 {
+  color: var(--color-light-2);
+}
+
 .text_color_dark {
   color: var(--color-primary);
 }
