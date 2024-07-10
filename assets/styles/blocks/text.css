@@ -24,10 +24,10 @@
   .text_medium {
     font-size: 16px;
   }
-}
-
-@media (max-width: 480px) {
   .text_base {
     font-size: 15px;
   }
+}
+
+@media (max-width: 480px) {
 }

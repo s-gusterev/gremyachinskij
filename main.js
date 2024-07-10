@@ -13,6 +13,61 @@ const productsSlider = document.querySelector('.products__slider');
 const productsList = document.querySelector('.products__list');
 const productsSlide = document.querySelectorAll('.products__slide');
 
+const radioActivityValue = document.querySelectorAll('input[name = activity]');
+const activityContent = document.querySelectorAll('.activity__content');
+
+const enableActivityContent = () =>
+  radioActivityValue.forEach((radio) => {
+    radio.addEventListener('change', (event) => {
+      activityContent.forEach((content) => {
+        if (event.target.value === content.dataset.activity) {
+          content.classList.remove('activity__content_novisible');
+        } else {
+          content.classList.add('activity__content_novisible');
+        }
+      });
+    });
+  });
+
+enableActivityContent();
+
+const inputText = document.querySelectorAll('.select-box__input-text');
+const selectBoxOption = document.querySelectorAll('.select-box__option');
+
+inputText.forEach((item) => {
+  item.addEventListener('click', () => {
+    item.classList.add('select-box__input-text_active');
+  });
+});
+
+selectBoxOption.forEach((option) => {
+  option.addEventListener('click', () => {
+    inputText.forEach((item) => {
+      item.classList.remove('select-box__input-text_active');
+    });
+  });
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.select-box')) {
+    inputText.forEach((item) => {
+      item.classList.remove('select-box__input-text_active');
+    });
+  }
+});
+
+const noVisibleActivityContent = () => {
+  activityContent.forEach((content, index) => {
+    if (index !== 0) content.classList.add('activity__content_novisible');
+  });
+};
+
+const visibleActivityContent = () => {
+  activityContent.forEach((content) => {
+    content.classList.remove('activity__content_novisible');
+  });
+};
+
 const toggledMenu = () => {
   burger.classList.toggle('header__burger_active');
   const isOpenBurger = burger.classList.contains('header__burger_active');
@@ -29,6 +84,7 @@ let productsSwiper;
 
 const breakpointChecker = function () {
   if (breakpoint.matches === true) {
+    visibleActivityContent();
     if (productsSwiper !== undefined) {
       productsSwiper.destroy(true, true);
       productsSlider.classList.remove('swiper');
@@ -39,6 +95,7 @@ const breakpointChecker = function () {
     }
     return;
   } else if (breakpoint.matches === false) {
+    noVisibleActivityContent();
     productsSlider.classList.add('swiper');
     productsList.classList.add('swiper-wrapper');
     productsSlide.forEach((slide) => {

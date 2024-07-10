@@ -458,7 +458,87 @@
         >
           Основная деятельность
         </h2>
-        <div class="activity__content grid">
+
+        <div class="activity__selection">
+          <div class="select-box">
+            <div class="select-box__current" tabindex="1">
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="activity-radio-1"
+                  value="production"
+                  name="activity"
+                  checked="checked"
+                />
+                <p class="select-box__input-text">Наше производство</p>
+              </div>
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="activity-radio-2"
+                  value="forest-nursery"
+                  name="activity"
+                />
+                <p class="select-box__input-text">Лесозаготовка</p>
+              </div>
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="activity-radio-3"
+                  value="timber-cutting"
+                  name="activity"
+                />
+                <p class="select-box__input-text">Питомник</p>
+              </div>
+
+              <svg
+                class="select-box__icon"
+                width="13"
+                height="10"
+                viewBox="0 0 13 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6.5 10L0.870835 0.25L12.1292 0.250001L6.5 10Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <ul class="select-box__list">
+              <li>
+                <label
+                  class="select-box__option"
+                  for="activity-radio-1"
+                  aria-hidden="aria-hidden"
+                  >Наше производство</label
+                >
+              </li>
+              <li>
+                <label
+                  class="select-box__option"
+                  for="activity-radio-2"
+                  aria-hidden="aria-hidden"
+                  >Лесозаготовка</label
+                >
+              </li>
+              <li>
+                <label
+                  class="select-box__option"
+                  for="activity-radio-3"
+                  aria-hidden="aria-hidden"
+                  >Питомник</label
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="activity__content grid" data-activity="production">
           <div class="activity__description">
             <h3 class="actitvity__title">Производство</h3>
             <p class="text text_base text_color_dark activity__text">
@@ -471,42 +551,175 @@
               качество продукции.
             </p>
           </div>
-          <img
-            class="activity__image activity__image_large"
-            src="./assets/images/proizvodstvo.jpg"
-            alt="Производство"
-            srcset="./assets/images/proizvodstvo_2x.jpg 2x"
-            loading="lazy"
-            width="760"
-            height="384"
-          />
-          <img
-            class="activity__image activity__image_small"
-            src="./assets/images/proizvodstvo-2.jpg"
-            alt="Производство"
-            srcset="./assets/images/proizvodstvo-2_2x.jpg 2x"
-            loading="lazy"
-            width="361"
-            height="186"
-          />
-          <img
-            class="activity__image activity__image_small"
-            src="./assets/images/proizvodstvo-3.jpg"
-            alt="Производство"
-            srcset="./assets/images/proizvodstvo-3_2x.jpg 2x"
-            loading="lazy"
-            width="361"
-            height="186"
-          />
-          <img
-            class="activity__image activity__image_small"
-            src="./assets/images/proizvodstvo-4.jpg"
-            alt="Производство"
-            srcset="./assets/images/proizvodstvo-4_2x.jpg 2x"
-            loading="lazy"
-            width="361"
-            height="186"
-          />
+          <div class="activity__image-wrapper activity__image-wrapper_large">
+            <img
+              class="activity__image"
+              src="./assets/images/proizvodstvo.jpg"
+              alt="Производство"
+              srcset="./assets/images/proizvodstvo_2x.jpg 2x"
+              loading="lazy"
+              width="760"
+              height="384"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image"
+              src="./assets/images/proizvodstvo-2.jpg"
+              alt="Производство"
+              srcset="./assets/images/proizvodstvo-2_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image"
+              src="./assets/images/proizvodstvo-3.jpg"
+              alt="Производство"
+              srcset="./assets/images/proizvodstvo-3_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image activity__image_small"
+              src="./assets/images/proizvodstvo-4.jpg"
+              alt="Производство"
+              srcset="./assets/images/proizvodstvo-4_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
+        </div>
+
+        <div class="activity__content grid" data-activity="forest-nursery">
+          <div class="activity__description">
+            <h3 class="actitvity__title">Лесоуправление и заготовка</h3>
+            <p class="text text_base text_color_dark activity__text">
+              Рубка леса осуществляется на арендованных участках, обеспечивая
+              бесперебойную поставку сырья для производства и для продажи.
+              Расчетная лесосека – 320 000 м3. Общая площадь арендованного леса
+              – 306 000 Га - cертифицирована по стандартам международной
+              добровольной лесной сертификации (FSC).
+            </p>
+          </div>
+          <div class="activity__image-wrapper activity__image-wrapper_large">
+            <img
+              class="activity__image"
+              src="./assets/images/les_1.jpg"
+              alt="Лесозаготовка"
+              srcset="./assets/images/les_1_2x.jpg 2x"
+              loading="lazy"
+              width="760"
+              height="384"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image"
+              src="./assets/images/les-2.jpg"
+              alt="Лесозаготовка"
+              srcset="./assets/images/les-2_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image"
+              src="./assets/images/les-2.jpg"
+              alt="Лесозаготовка"
+              srcset="./assets/images/les-2_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image"
+              src="./assets/images/les-2.jpg"
+              alt="Лесозаготовка"
+              srcset="./assets/images/les-2_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
+        </div>
+
+        <div class="activity__content grid" data-activity="timber-cutting">
+          <div class="activity__description">
+            <h3 class="actitvity__title">Питомник</h3>
+            <p class="text text_base text_color_dark activity__text">
+              Задача лесопитомника – обеспечение посадочным материалом
+              собственной и сторонней лесозаготовки.
+            </p>
+            <p class="text text_base text_color_dark activity__text">
+              Питомник полностью покрывает потребности Пермского края в сеянцах
+              сибирской ели. Общая площадь теплиц – 4800 м3, питомника – 15 Га.
+              Потенциал – до 4 млн. сеянцев в год.
+            </p>
+          </div>
+          <div class="activity__image-wrapper activity__image-wrapper_large">
+            <img
+              class="activity__image"
+              src="./assets/images/les_1.jpg"
+              alt="Питомник"
+              srcset="./assets/images/les_1_2x.jpg 2x"
+              loading="lazy"
+              width="760"
+              height="384"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image"
+              src="./assets/images/pitomnik-1.jpg"
+              alt="Питомник"
+              srcset="./assets/images/pitomnik-1_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image"
+              src="./assets/images/pitomnik-2.jpg"
+              alt="Лесозаготовка"
+              srcset="./assets/images/pitomnik-2_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
+
+          <div class="activity__image-wrapper activity__image-wrapper_small">
+            <img
+              class="activity__image"
+              src="./assets/images/pitomnik-3.jpg"
+              alt="Лесозаготовка"
+              srcset="./assets/images/pitomnik-3_2x.jpg 2x"
+              loading="lazy"
+              width="361"
+              height="186"
+            />
+          </div>
         </div>
       </section>
     </main>

@@ -53,6 +53,10 @@
   .title_large {
     font-size: 40px;
   }
+
+  .title_base {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 480px) {
