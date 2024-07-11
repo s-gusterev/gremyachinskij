@@ -106,7 +106,7 @@ const breakpointChecker = function () {
 };
 
 const enableProductsSwiper = function () {
-  productsSwiper = new Swiper('.swiper', {
+  productsSwiper = new Swiper('.products__slider', {
     slidesPerGroup: 1,
     slidesPerView: 'auto',
     loop: true,
@@ -125,6 +125,19 @@ const enableProductsSwiper = function () {
     },
   });
 };
+
+new Swiper('.vacancies__slider', {
+  slidesPerGroup: 1,
+  slidesPerView: 'auto',
+  loop: true,
+  speed: 700,
+  spaceBetween: 40,
+  modules: [Navigation],
+  navigation: {
+    prevEl: '.vacancies__button-slider-prev',
+    nextEl: '.vacancies__button-slider-next',
+  },
+});
 
 breakpoint.addEventListener('change', () => breakpointChecker());
 

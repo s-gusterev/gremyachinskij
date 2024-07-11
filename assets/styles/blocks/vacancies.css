@@ -1,0 +1,115 @@
+.vacancies {
+  margin-bottom: 137px;
+}
+
+.vacancies__header {
+  margin-bottom: 52px;
+  position: relative;
+}
+
+.vacancies__header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 0.5px solid rgba(73, 75, 68, 0.4);
+}
+
+.vacancies__slider-buttons {
+  display: flex;
+  gap: 11px;
+}
+
+.vacancies__slider {
+  --container-offset: 0px;
+}
+
+.vacancies__item {
+  max-width: 360px;
+  background: #f6f6f7;
+  padding: 40px 17px;
+}
+
+.vacancies__item-title {
+  padding-bottom: 13px;
+  border-bottom: 0.5px solid rgba(73, 75, 68, 0.3);
+  margin-bottom: 18px;
+}
+
+.vacancies__salary {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--color-accent);
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.vacancies__item-text {
+  margin-bottom: 57px;
+}
+
+.vacancies__read-more {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: block;
+  position: relative;
+}
+
+.vacancies__read-more:hover {
+  color: var(--color-accent-hover);
+  opacity: 0.8;
+}
+
+.vacancies__read-more::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 28.5px;
+  height: 12px;
+  background-image: url(../../images/icons/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.vacancies__button-slider-next,
+.vacancies__button-slider-prev {
+  color: var(--color-dark);
+}
+
+.vacancies__hand {
+  position: absolute;
+  width: 31px;
+  height: 41px;
+  background-image: url(../../images/icons/hand-touch.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 38px;
+  bottom: 38px;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .vacancies__header {
+    --container-offset: 38px;
+    margin-bottom: 0;
+  }
+
+  .vacancies__header-container {
+    padding-bottom: 73px;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  .vacancies__slider-buttons {
+    display: none;
+  }
+
+  .vacancies__hand {
+    display: block;
+  }
+}
