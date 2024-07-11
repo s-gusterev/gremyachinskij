@@ -1,0 +1,7 @@
+.hand {
+  width: 31px;
+  height: 41px;
+  background-image: url(../../images/icons/hand-touch.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

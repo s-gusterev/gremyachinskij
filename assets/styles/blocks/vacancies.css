@@ -79,16 +79,20 @@
 
 .vacancies__button-slider-next,
 .vacancies__button-slider-prev {
-  color: var(--color-dark);
+  color: var(--color-accent);
+}
+.vacancies__button-slider-next:hover svg path,
+.vacancies__button-slider-prev:hover svg rect {
+  stroke: var(--color-accent);
+}
+
+.vacancies__button-slider-next:hover svg line,
+.vacancies__button-slider-prev:hover svg line {
+  stroke: var(--color-light);
 }
 
 .vacancies__hand {
   position: absolute;
-  width: 31px;
-  height: 41px;
-  background-image: url(../../images/icons/hand-touch.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
   right: 38px;
   bottom: 38px;
   display: none;

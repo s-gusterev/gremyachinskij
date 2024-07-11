@@ -13,6 +13,10 @@ const productsSlider = document.querySelector('.products__slider');
 const productsList = document.querySelector('.products__list');
 const productsSlide = document.querySelectorAll('.products__slide');
 
+const newsSlider = document.querySelector('.news__content');
+const newsList = document.querySelector('.news__list');
+const newsSlide = document.querySelectorAll('.news__item');
+
 const radioActivityValue = document.querySelectorAll('input[name = activity]');
 const activityContent = document.querySelectorAll('.activity__content');
 const inputText = document.querySelectorAll('.select-box__input-text');
@@ -78,8 +82,10 @@ const toggledMenu = () => {
 burger.addEventListener('click', toggledMenu);
 
 const breakpoint = window.matchMedia('(min-width: 824px)');
+const breakpointBig = window.matchMedia('(min-width: 1220px)');
 
 let productsSwiper;
+let newsSwiper;
 
 const breakpointChecker = function () {
   if (breakpoint.matches === true) {
@@ -126,6 +132,46 @@ const enableProductsSwiper = function () {
   });
 };
 
+const breakpointCheckerBig = function () {
+  if (breakpointBig.matches === true) {
+    // visibleActivityContent();
+    if (newsSwiper !== undefined) {
+      newsSwiper.destroy(true, true);
+      newsSlider.classList.remove('swiper');
+      newsList.classList.remove('swiper-wrapper');
+      newsSlide.forEach((slide) => {
+        slide.classList.remove('swiper-slide');
+      });
+    }
+    return;
+  } else if (breakpointBig.matches === false) {
+    // noVisibleActivityContent();
+    newsSlider.classList.add('swiper');
+    newsList.classList.add('swiper-wrapper');
+    newsSlide.forEach((slide) => {
+      slide.classList.add('swiper-slide');
+      slide.style.width = '360px';
+    });
+    return enableNewsSwiper();
+  }
+};
+
+const enableNewsSwiper = function () {
+  newsSwiper = new Swiper('.news__content', {
+    slidesPerGroup: 1,
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 700,
+    spaceBetween: 40,
+    watchOverflow: true,
+    on: {
+      resize: function () {
+        newsSwiper.update();
+      },
+    },
+  });
+};
+
 new Swiper('.vacancies__slider', {
   slidesPerGroup: 1,
   slidesPerView: 'auto',
@@ -140,5 +186,7 @@ new Swiper('.vacancies__slider', {
 });
 
 breakpoint.addEventListener('change', () => breakpointChecker());
+breakpointBig.addEventListener('change', () => breakpointCheckerBig());
 
 breakpointChecker();
+breakpointCheckerBig();
