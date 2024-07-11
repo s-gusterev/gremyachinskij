@@ -1,0 +1,48 @@
+.cooperation {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../../images/backgrounds/cooperation-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 89px;
+  padding-bottom: 68px;
+  padding-inline: 15px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 137px;
+}
+
+.cooperation__title {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cooperation__text {
+  margin-bottom: 42px;
+  max-width: 454px;
+  text-align: center;
+}
+
+.cooperation__button {
+  width: 179px;
+  height: 50px;
+}
+
+@media (max-width: 815px) {
+  .cooperation {
+    padding-top: 68px;
+    padding-bottom: 40px;
+    margin-bottom: 87px;
+  }
+  .cooperation__text {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cooperation {
+    display: none;
+  }
+}
