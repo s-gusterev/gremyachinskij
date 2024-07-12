@@ -1252,6 +1252,108 @@
           </ul>
         </div>
       </section>
+      <div class="contacts">
+        <div class="contacts__container container">
+          <div class="contacts__info">
+            <h2
+              class="title title_base title_font-weight_bold title_line-height_medium title_color_light contacts__title"
+            >
+              Свяжитесь с нашим специалистом
+            </h2>
+            <p class="text text_base text_color_light contacts__text">
+              Заинтересованы в сотрудничестве или остались вопросы? Заполните
+              форму обратной связи и наши менеджеры обязательно свяжутся с вами
+            </p>
+            <ul class="list-reset contacts__list">
+              <li class="contacts__item">
+                Ответим втечение 15 минут, в рабочее время
+              </li>
+              <li class="contacts__item">Бережем ваши персональные данные</li>
+            </ul>
+          </div>
+          <form class="contacts__form">
+            <div class="contacts__form-block contacts__form-block_name">
+              <label for="contacts-name" class="contacts__label"
+                >Контактное лицо</label
+              >
+              <input
+                type="text"
+                name="contacts-name"
+                id="contacts-name"
+                placeholder="Ф.И.О."
+                class="contacts__input"
+              />
+            </div>
+            <div class="contacts__form-block">
+              <label for="contacts-tel" class="contacts__label">Телефон</label>
+              <input
+                type="tel"
+                name="contacts-tel"
+                id="contacts-tel"
+                placeholder="+7 999 199 19 19"
+                class="contacts__input contacts__input_width_small"
+              />
+            </div>
+            <div class="contacts__form-block">
+              <label for="contacts-email" class="contacts__label">Email</label>
+              <input
+                type="email"
+                name="contacts-email"
+                id="contacts-email"
+                placeholder="info@mail"
+                class="contacts__input"
+              />
+            </div>
+
+            <div class="contacts__form-block contacts__form-block_select">
+              <label for="contacts-select" class="contacts__label"
+                >Причина обращения</label
+              >
+              <select
+                id="contacts-select"
+                name="contacts-select"
+                class="contacts__select"
+              >
+                <option value="" disabled>Выберите из списка</option>
+                <option value="0">Обратная связь</option>
+                <option value="1">Заказать оборудование</option>
+                <option value="2">Задать вопрос</option>
+              </select>
+            </div>
+            <div class="contacts__form-block contacts__form-block_message">
+              <label for="contacts-message" class="contacts__label"
+                >Сообщение</label
+              >
+              <textarea
+                name=" contacts-message"
+                id="contacts-message"
+                placeholder="Напишите суть вашего вопроса"
+                class="contacts__textarea"
+              ></textarea>
+            </div>
+            <div class="contacts__form-block contacts__form-block_checkbox">
+              <input
+                type="checkbox"
+                name="contacts-checkbox "
+                id="contacts-checkbox"
+                class="contacts__checkbox"
+              />
+              <label for="contacts-checkbox" class="contacts__checkbox-label"
+                >Нажимая кнопку я соглашаюсь с<a
+                  class="contacts__checkbox-link"
+                  href="#"
+                >
+                  политикой конфиденциальности</a
+                >
+              </label>
+            </div>
+
+            <button type="submit" class="btn-reset contacts__submit">
+              Связаться с нами
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
     <script type="module" src="/main.js"></script>
   </body>
