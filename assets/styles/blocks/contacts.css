@@ -191,18 +191,18 @@
   color: var(--color-light-2);
   position: relative;
   padding-left: 21px;
+  display: inline-block;
 }
 
 .contacts__label-checkbox::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 2px;
   left: 0;
   width: 11px;
   height: 11px;
   border-radius: 1px;
   border: 1px solid var(--color-light);
-  transform: translateY(-50%);
 }
 
 .contacts__checkbox-link {
@@ -224,7 +224,7 @@
   width: 12px;
   height: 10px;
   left: 2px;
-  top: 4px;
+  top: 2px;
   background-image: url(../../images/icons/chek.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -239,4 +239,116 @@
   color: var(--color-light);
   padding: 16px 45px;
   max-width: 226px;
+}
+
+.contacts__phone-link {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--color-light);
+  text-decoration: none;
+  display: none;
+}
+
+.contacts__phone-link:hover {
+  color: var(--color-light-3);
+}
+
+@media (max-width: 1300px) {
+  .contacts__container {
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1180px) {
+  .contacts__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .contacts__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: auto;
+    margin-top: 0;
+  }
+
+  .contacts__title {
+    text-align: center;
+  }
+
+  .contacts__text {
+    max-width: 500px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts__info {
+    margin-left: 37px;
+    margin-right: 37px;
+  }
+
+  .contacts__container {
+    --container-offset: 0;
+  }
+
+  .contacts__form {
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 630px) {
+  .contacts__form {
+    clip-path: none;
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 60px 37px 80px;
+  }
+
+  .contacts__form-block_name {
+    grid-column: 1 span;
+  }
+  .contacts__form-block_select {
+    grid-column: 1 span;
+  }
+  .contacts__form-block_message {
+    grid-column: 1 span;
+  }
+  .contacts__form-block_checkbox {
+    grid-column: 1 span;
+  }
+
+  .contacts__submit {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts__title {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .contacts__text {
+    text-align: left;
+    margin-bottom: 26px;
+  }
+  .contacts__list {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 51px;
+  }
+  .contacts__item {
+    max-width: max-content;
+  }
+
+  .contacts__phone-link {
+    display: inline;
+  }
 }
