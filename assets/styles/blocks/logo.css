@@ -1,21 +1,29 @@
 .logo {
-  background-image: url(../../images/logo.svg);
   background-size: cover;
   display: block;
-  width: 226px;
-  height: 40px;
   text-decoration: none;
   transition: opacity 0.3s ease;
+  background-image: url(../../images/logo.svg);
 }
 
 .logo:hover {
   opacity: 0.7;
 }
 
+.logo_header {
+  width: 226px;
+  height: 40px;
+}
+
+.logo_footer {
+  width: 169px;
+  height: 30px;
+}
+
 /* TODO: add media queries */
 
 @media (max-width: 480px) {
-  .logo {
+  .logo_header {
     width: 141px;
     height: 24px;
   }
