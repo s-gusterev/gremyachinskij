@@ -66,3 +66,21 @@
     right: 0;
   }
 }
+
+@media (max-width: 480px) {
+  .delivery {
+    --container-offset: 38px;
+  }
+
+  .delivery__description {
+    gap: 0;
+  }
+
+  .delivery__icons {
+    grid-template-columns: 87px 39px;
+  }
+
+  .delivery__icons svg {
+    width: 100%;
+  }
+}

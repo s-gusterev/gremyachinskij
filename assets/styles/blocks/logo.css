@@ -27,4 +27,8 @@
     width: 141px;
     height: 24px;
   }
+
+  .logo_footer {
+    background-image: url(../../images/logo-footer-mobile.svg);
+  }
 }

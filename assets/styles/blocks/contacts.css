@@ -306,7 +306,7 @@
   .contacts__form {
     clip-path: none;
     grid-template-columns: 1fr;
-    width: 100%;
+    width: 100vw;
     padding: 60px 37px 80px;
   }
 
@@ -330,6 +330,14 @@
 }
 
 @media (max-width: 480px) {
+  .contacts {
+    padding-bottom: 0;
+  }
+
+  .contacts__container {
+    --container-offset: 0;
+  }
+
   .contacts__title {
     text-align: left;
     margin-bottom: 24px;
