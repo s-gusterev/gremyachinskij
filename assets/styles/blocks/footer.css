@@ -50,7 +50,7 @@
 }
 
 .footer__title_margin_bottom_m {
-  margin-bottom: 52px;
+  margin-bottom: 42px;
 }
 
 .footer__list-block_realization {
@@ -74,4 +74,13 @@
 
 .footer__block-item_margin_bottom_s {
   margin-bottom: 30px;
+}
+
+.footer__block-item_grid {
+  display: grid;
+  gap: 10px;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 10px;
 }
