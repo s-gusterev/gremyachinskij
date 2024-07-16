@@ -6,12 +6,15 @@
   background-size: cover;
   border-radius: 5px;
   margin-bottom: 137px;
+  --container-offset: 0;
 }
 
 .supply__content {
   padding-top: 59px;
   display: flex;
   gap: 61px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .supply__description {
@@ -82,6 +85,8 @@
     justify-content: center;
     align-items: center;
     gap: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .supply__description {
@@ -94,9 +99,14 @@
 
   .supply__banner {
     max-width: none;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  .supply__description {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -122,7 +132,6 @@
 @media (max-width: 480px) {
   .supply {
     margin-bottom: 80px;
-    --container-offset: 38px;
   }
 
   .supply__description {
@@ -134,5 +143,10 @@
   }
   .supply__item:not(:last-child) {
     margin-bottom: 33px;
+  }
+
+  .supply__description {
+    padding-left: 38px;
+    padding-right: 38px;
   }
 }

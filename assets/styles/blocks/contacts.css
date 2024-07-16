@@ -307,7 +307,7 @@
   .contacts__form {
     clip-path: none;
     grid-template-columns: 1fr;
-    width: 100vw;
+    width: 100%;
     padding: 60px 37px 80px;
   }
 
