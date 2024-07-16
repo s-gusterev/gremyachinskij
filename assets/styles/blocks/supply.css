@@ -12,6 +12,7 @@
 .supply__content {
   padding-top: 59px;
   display: flex;
+  justify-content: space-around;
   gap: 61px;
   padding-left: 15px;
   padding-right: 15px;
