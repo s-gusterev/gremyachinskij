@@ -6,7 +6,6 @@
   background-size: cover;
   border-radius: 5px;
   margin-bottom: 137px;
-  --container-offset: 0;
 }
 
 .supply__content {
@@ -79,6 +78,7 @@
 @media (max-width: 915px) {
   .supply {
     border-radius: 0;
+    --container-offset: 0;
   }
 
   .supply__content {
