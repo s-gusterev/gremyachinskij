@@ -77,6 +77,35 @@ const toggledMenu = () => {
   burger.ariaLabel = isOpenBurger ? 'Закрыть меню' : 'Открыть меню';
 
   menu.classList.toggle('header__menu_open');
+
+  if (isOpenBurger) {
+    document.addEventListener('click', handleClickOutsideMenu);
+    document.addEventListener('keydown', handleEscKey);
+  } else {
+    document.removeEventListener('click', handleClickOutsideMenu);
+    document.removeEventListener('keydown', handleEscKey);
+  }
+};
+
+const handleClickOutsideMenu = (event) => {
+  if (!menu.contains(event.target) && !burger.contains(event.target)) {
+    closeMenu();
+  }
+};
+
+const handleEscKey = (event) => {
+  if (event.key === 'Escape') {
+    closeMenu();
+  }
+};
+
+const closeMenu = () => {
+  burger.classList.remove('header__burger_active');
+  burger.ariaLabel = 'Открыть меню';
+  menu.classList.remove('header__menu_open');
+
+  document.removeEventListener('click', handleClickOutsideMenu);
+  document.removeEventListener('keydown', handleEscKey);
 };
 
 burger.addEventListener('click', toggledMenu);
@@ -134,7 +163,6 @@ const enableProductsSwiper = function () {
 
 const breakpointCheckerBig = function () {
   if (breakpointBig.matches === true) {
-    // visibleActivityContent();
     if (newsSwiper !== undefined) {
       newsSwiper.destroy(true, true);
       newsSlider.classList.remove('swiper');
@@ -145,7 +173,6 @@ const breakpointCheckerBig = function () {
     }
     return;
   } else if (breakpointBig.matches === false) {
-    // noVisibleActivityContent();
     newsSlider.classList.add('swiper');
     newsList.classList.add('swiper-wrapper');
     newsSlide.forEach((slide) => {
@@ -160,7 +187,6 @@ const enableNewsSwiper = function () {
   newsSwiper = new Swiper('.news__content', {
     slidesPerGroup: 1,
     slidesPerView: 'auto',
-    loop: true,
     speed: 700,
     spaceBetween: 40,
     watchOverflow: true,
